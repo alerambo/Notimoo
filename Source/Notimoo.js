@@ -8,7 +8,7 @@ authors:
 requires:
 core:1.2: [Element.Style, Element.Event, Element.Dimension, Fx.Tween, Fx.Morph, Array]
 provides: [Notimoo]
-version: 1.2
+version: 1.3
 ...
 
 Script: Notimoo.js
@@ -221,8 +221,8 @@ var Notimoo = new Class({
        
        // Set notification content
        // Since title is optional and we're reusing notifications, we need to check 
-       el.getElement('span.title').set('html', (options.title) ? options.title : '');
-       el.getElement('div.message').set('html', options.message);
+       el.getElement('span.title').set('text', (options.title) ? options.title : '');
+       el.getElement('div.message').set('text', options.message);
 
 	   // Add custom classes
 	   if (options.customClass) el.addClass(options.customClass);
